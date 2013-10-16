@@ -1,6 +1,9 @@
+<!doctype html>
 <html>
     <head>
         <title>Online Thesis Viewer</title>
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
     </head>
     <body>
 
@@ -40,7 +43,7 @@
                     </ul>
                     <a href='#' class="btn btn-primary btn-login navbar-btn navbar-right">Log in</a><form class="navbar-form navbar-right form-search" role="search" _lpchecked="1">
                         <div class="form-group">
-                          <input type="text" class="form-control search-input" placeholder="Search thesis here..">
+                          <input type="text" class="form-control search-input" placeholder="Search">
                         </div>
                       </form>
                     </div>
@@ -51,7 +54,6 @@
                 </div>
             </div>
         </div>
-
 
         <!-- scripts -->
         <!-- =================== -->
@@ -96,9 +98,11 @@
         <script id="tpl-thesis-detail" type="text/x-handlebars-template">
                 <h2 id="thesis-title">{{Title}}</h2>
                 <h3 id="thesis-subtitle">{{Subtitle}}</h3>
-                <div class="fb-like" data-href="https://pupcoetm.appspot.com/thesis-{{Id}}" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
+                
                 <blockquote id="thesis-description"><b>Year:</b> {{Year}} <br><br> <b>Description:</b> {{Description}}</blockquote>
-                <hr>                
+                <div class="fb-like" data-href="https://pupcoetm.appspot.com/thesis-{{Id}}" data-colorscheme="light" data-layout="standard" data-action="like" data-show-faces="true" data-send="false"></div>
+                <hr>  
+
                 <div class="fb-comments" data-href="http://localhost:9080/thesis-{{Id}}" data-colorscheme="light" data-numposts="10" data-width="600"></div>
                 
         </script>
